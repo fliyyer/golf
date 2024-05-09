@@ -1,0 +1,11 @@
+CRITICAL - 2024-05-09 11:44:45 --> CodeIgniter\HTTP\Exceptions\BadRequestException: The URI you submitted has disallowed characters: "C:UsersrahmaOneDriveÞsktopústworkramework-4.5.1publicssets஬kground.png"
+[Method: GET, Route: C:UsersrahmaOneDrive%C3%9Esktop%C3%BAstwork%0Framework-4.5.1publicssets%E0%AE%ACkground.png]
+in SYSTEMPATH\Router\Router.php on line 736.
+ 1 SYSTEMPATH\Router\Router.php(203): CodeIgniter\Router\Router->checkDisallowedChars('C:UsersrahmaOneDriveÞsktopústworkramework-4.5.1publicssets஬kground.png')
+ 2 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('C:UsersrahmaOneDriveÞsktopústworkramework-4.5.1publicssets஬kground.png')
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
