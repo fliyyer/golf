@@ -1,0 +1,230 @@
+CRITICAL - 2024-05-10 07:05:53 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/concordia]
+in APPPATH\Controllers\Booking.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Booking->detail('concordia')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Booking))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:05:58 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/dazn]
+in APPPATH\Controllers\Booking.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Booking->detail('dazn')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Booking))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:06:14 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/concordia]
+in APPPATH\Controllers\Booking.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Booking->detail('concordia')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Booking))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:06:15 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/concordia]
+in APPPATH\Controllers\Booking.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Booking->detail('concordia')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Booking))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:06:27 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/concordia]
+in APPPATH\Controllers\Booking.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Booking->detail('concordia')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Booking))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:06:44 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/concordia]
+in APPPATH\Controllers\Booking.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Booking->detail('concordia')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Booking))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:09:43 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/concordia]
+in APPPATH\Controllers\Facilities.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('concordia')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:09:51 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/concordia]
+in APPPATH\Controllers\Facilities.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('concordia')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:10:12 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/concordia]
+in APPPATH\Controllers\Facilities.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('concordia')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:03 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/concordia]
+in APPPATH\Controllers\Facilities.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('concordia')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:08 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities/concordia]
+in APPPATH\Controllers\Facilities.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('concordia')
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:43 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:44 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:45 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:45 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:45 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:45 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:45 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:45 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:11:46 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:12:29 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Facilities->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:12:30 --> Error: Class "App\Models\FacilityModel" not found
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Facilities->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 07:13:05 --> ArgumentCountError: Too few arguments to function App\Controllers\Facilities::__construct(), 0 passed in C:\laragon\www\golf\system\CodeIgniter.php on line 903 and exactly 1 expected
+[Method: GET, Route: facilities]
+in APPPATH\Controllers\Facilities.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Facilities->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(500): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
