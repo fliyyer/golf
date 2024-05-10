@@ -228,3 +228,63 @@ in APPPATH\Controllers\Facilities.php on line 12.
  5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
  7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 08:02:31 --> ErrorException: Undefined variable $facilityTitle
+[Method: GET, Route: facilities/1]
+in APPPATH\Views\facility_detail.php on line 13.
+ 1 APPPATH\Views\facility_detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $facilityTitle', 'C:\\laragon\\www\\golf\\app\\Views\\facility_detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\golf\\app\\Views\\facility_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('facility_detail', [], true)
+ 5 APPPATH\Controllers\Facilities.php(14): view('facility_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 08:02:32 --> ErrorException: Undefined variable $facilityTitle
+[Method: GET, Route: facilities/1]
+in APPPATH\Views\facility_detail.php on line 13.
+ 1 APPPATH\Views\facility_detail.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $facilityTitle', 'C:\\laragon\\www\\golf\\app\\Views\\facility_detail.php', 13)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\golf\\app\\Views\\facility_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('facility_detail', [], true)
+ 5 APPPATH\Controllers\Facilities.php(14): view('facility_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 08:41:47 --> ErrorException: Undefined array key "title"
+[Method: GET, Route: facilities/1]
+in APPPATH\Views\facility_detail.php on line 14.
+ 1 APPPATH\Views\facility_detail.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "title"', 'C:\\laragon\\www\\golf\\app\\Views\\facility_detail.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\golf\\app\\Views\\facility_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('facility_detail', [], true)
+ 5 APPPATH\Controllers\Facilities.php(19): view('facility_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
+CRITICAL - 2024-05-10 08:42:11 --> ErrorException: Undefined array key "data-title"
+[Method: GET, Route: facilities/1]
+in APPPATH\Views\facility_detail.php on line 14.
+ 1 APPPATH\Views\facility_detail.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "data-title"', 'C:\\laragon\\www\\golf\\app\\Views\\facility_detail.php', 14)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\golf\\app\\Views\\facility_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('facility_detail', [], true)
+ 5 APPPATH\Controllers\Facilities.php(19): view('facility_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\laragon\\www\\golf\\public\\index.php')
