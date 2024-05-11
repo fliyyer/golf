@@ -41,6 +41,7 @@
                 <p class="text-[#061023] text-[25px]">Pablo23@gmail.com</p>
                 <p class="text-[#061023] text-[25px]">0856342635421</p>
             </div>
+            <button onclick="window.location.href='<?= base_url('logout') ?>'" class="px-8 mx-auto mt-8 bg-black text-white py-2 uppercase font-semibold rounded-md mb-8 hover:bg-[#D9D9D9] hover:text-black focus:outline-none">Logout</button>
         </div>
     </main>
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Welcome To GOLF+</title>
+    <title>Register - Welcome To GOLF+</title>
     <link rel="stylesheet" href="<?= base_url() ?>css/styles.css">
 </head>
 
@@ -27,14 +27,14 @@
             </div>
         </div>
         <div class="bg-[#000000] max-w-md w-full px-[36px] py-[56px] rounded-[46px] bg-opacity-35 shadow-md">
-            <form action="<?= site_url('register') ?>" method="post">
-                <p class="text-center text-xl text-white mb-4">Welcome Back<br> Fill out the details below</p>
+            <form action="<?= base_url('register') ?>" method="post">
+                <p class="text-center text-xl text-white mb-4">Register New Account</p>
                 <div class="mb-4 mt-14">
                     <label for="username" class="block text-lg text-white">Username</label>
                     <input type="text" name="username" id="username" class="form-input mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
                 </div>
                 <div class="mb-4">
-                    <label for="phone" class="block text-lg text-white">phone</label>
+                    <label for="phone" class="block text-lg text-white">Phone</label>
                     <input type="text" name="phone" id="phone" class="form-input mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
                 </div>
                 <div class="mb-4">

@@ -29,6 +29,11 @@
         <div class="bg-[#000000] max-w-md w-full px-[36px] py-[56px] rounded-[46px] bg-opacity-35 shadow-md">
             <form action="<?= site_url('login') ?>" method="post">
                 <p class="text-center text-xl text-white mb-4">Welcome Back<br> Fill out the details below</p>
+                <?php if (session()->has('error')) : ?>
+                    <div class="text-red-600 font-medium text-center alert-danger">
+                        <?= session('error') ?>
+                    </div>
+                <?php endif; ?>
                 <div class="mb-4 mt-14">
                     <label for="username" class="block text-lg text-white">Username</label>
                     <input type="text" name="username" id="username" class="form-input mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
@@ -38,13 +43,14 @@
                     <input type="password" name="password" id="password" class="form-input mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
                 </div>
                 <div class="mb-4 flex justify-between mt-10 items-center">
-                    <a href="#" class="text-white">Sign Up</a>
+                    <a href="<?= site_url('register') ?>" class="text-white">Sign Up</a>
                     <a href="#" class="text-white">Forgot Password</a>
                 </div>
                 <button type="submit" class="w-full bg-black text-white py-2 uppercase font-semibold px-4 rounded-md mb-8 hover:bg-[#D9D9D9] hover:text-black focus:outline-none">Login</button>
             </form>
         </div>
     </div>
+
 </body>
 
 </html>
