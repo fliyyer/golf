@@ -207,3 +207,730 @@ INFO - 2024-05-11 05:36:44 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-05-11 05:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-11 05:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-05-11 05:36:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2024-05-11 12:21:49 --> mysqli_sql_exception: Column 'selectedDay' cannot be null in C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `bo...', 0)
+#1 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bo...')
+#2 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bo...')
+#3 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bo...', Array, false)
+#4 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\app\Controllers\BookingController.php(33): CodeIgniter\Model->insert(Array)
+#8 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+#9 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+#10 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\...')
+#15 {main}
+CRITICAL - 2024-05-11 12:21:49 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'selectedDay' cannot be null
+[Method: POST, Route: save-booking]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (:userId:, :selectedDay:, :selectedTeeTime:, :selectedPlayer:, :selectedPrice:, :selectedPaymentMethod:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\BookingController.php(33): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 12:21:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'selectedDay' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (:userId:, :selectedDay:, :selectedTeeTime:, :selectedPlayer:, :selectedPrice:, :selectedPaymentMethod:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\BookingController.php(33): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 12:21:49 --> [Caused by] mysqli_sql_exception: Column 'selectedDay' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (:userId:, :selectedDay:, :selectedTeeTime:, :selectedPlayer:, :selectedPrice:, :selectedPaymentMethod:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\BookingController.php(33): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+ERROR - 2024-05-11 12:21:53 --> mysqli_sql_exception: Column 'selectedDay' cannot be null in C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `bo...', 0)
+#1 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bo...')
+#2 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bo...')
+#3 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bo...', Array, false)
+#4 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\app\Controllers\BookingController.php(33): CodeIgniter\Model->insert(Array)
+#8 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+#9 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+#10 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\...')
+#15 {main}
+CRITICAL - 2024-05-11 12:21:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'selectedDay' cannot be null
+[Method: POST, Route: save-booking]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (:userId:, :selectedDay:, :selectedTeeTime:, :selectedPlayer:, :selectedPrice:, :selectedPaymentMethod:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\BookingController.php(33): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 12:21:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'selectedDay' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (:userId:, :selectedDay:, :selectedTeeTime:, :selectedPlayer:, :selectedPrice:, :selectedPaymentMethod:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\BookingController.php(33): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 12:21:53 --> [Caused by] mysqli_sql_exception: Column 'selectedDay' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (:userId:, :selectedDay:, :selectedTeeTime:, :selectedPlayer:, :selectedPrice:, :selectedPaymentMethod:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\BookingController.php(33): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+ERROR - 2024-05-11 12:22:03 --> mysqli_sql_exception: Column 'selectedDay' cannot be null in C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `bo...', 0)
+#1 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bo...')
+#2 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bo...')
+#3 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bo...', Array, false)
+#4 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Model.php(791): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\app\Controllers\BookingController.php(33): CodeIgniter\Model->insert(Array)
+#8 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+#9 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+#10 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Boot.php(312): CodeIgniter\CodeIgniter->run()
+#12 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\...')
+#15 {main}
+CRITICAL - 2024-05-11 12:22:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'selectedDay' cannot be null
+[Method: POST, Route: save-booking]
+in SYSTEMPATH\Database\BaseConnection.php on line 676.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (:userId:, :selectedDay:, :selectedTeeTime:, :selectedPlayer:, :selectedPrice:, :selectedPaymentMethod:)', [...], false)
+ 2 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\BookingController.php(33): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 12:22:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'selectedDay' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 313.
+ 1 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (:userId:, :selectedDay:, :selectedTeeTime:, :selectedPlayer:, :selectedPrice:, :selectedPaymentMethod:)', [...], false)
+ 4 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\BookingController.php(33): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 12:22:03 --> [Caused by] mysqli_sql_exception: Column 'selectedDay' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 308.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(308): mysqli->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (\'admin\', NULL, NULL, NULL, NULL, NULL)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2325): CodeIgniter\Database\BaseConnection->query('INSERT INTO `bookings` (`userId`, `selectedDay`, `selectedTeeTime`, `selectedPlayer`, `selectedPrice`, `selectedPaymentMethod`) VALUES (:userId:, :selectedDay:, :selectedTeeTime:, :selectedPlayer:, :selectedPrice:, :selectedPaymentMethod:)', [...], false)
+ 5 SYSTEMPATH\Model.php(383): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(791): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\BookingController.php(33): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\BookingController->saveBooking()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BookingController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:28:27 --> ErrorException: Undefined variable $title
+[Method: GET, Route: facilities/1]
+in APPPATH\Views\facility_detail.php on line 131.
+ 1 APPPATH\Views\facility_detail.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\facility_detail.php', 131)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\facility_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('facility_detail', [], true)
+ 5 APPPATH\Controllers\Facilities.php(17): view('facility_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:28:30 --> ErrorException: Undefined variable $title
+[Method: GET, Route: facilities/1]
+in APPPATH\Views\facility_detail.php on line 131.
+ 1 APPPATH\Views\facility_detail.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\facility_detail.php', 131)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\facility_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('facility_detail', [], true)
+ 5 APPPATH\Controllers\Facilities.php(17): view('facility_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:28:33 --> ErrorException: Undefined variable $title
+[Method: GET, Route: facilities/1]
+in APPPATH\Views\facility_detail.php on line 131.
+ 1 APPPATH\Views\facility_detail.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\facility_detail.php', 131)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\facility_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('facility_detail', [], true)
+ 5 APPPATH\Controllers\Facilities.php(17): view('facility_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:28:49 --> ErrorException: Undefined variable $title
+[Method: GET, Route: facilities/1]
+in APPPATH\Views\facility_detail.php on line 136.
+ 1 APPPATH\Views\facility_detail.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $title', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\facility_detail.php', 136)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\facility_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('facility_detail', [], true)
+ 5 APPPATH\Controllers\Facilities.php(17): view('facility_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:29:30 --> ErrorException: Undefined variable $facility
+[Method: GET, Route: facilities/1]
+in APPPATH\Views\facility_detail.php on line 136.
+ 1 APPPATH\Views\facility_detail.php(136): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $facility', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\facility_detail.php', 136)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\facility_detail.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('facility_detail', [], true)
+ 5 APPPATH\Controllers\Facilities.php(17): view('facility_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Facilities->detail('1')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Facilities))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:36:08 --> ErrorException: Undefined variable $bookings
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bookings', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:36:09 --> ErrorException: Undefined variable $bookings
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bookings', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:36:17 --> ErrorException: Undefined variable $bookings
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bookings', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:36:34 --> ErrorException: Undefined variable $bookings
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bookings', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:36:36 --> ErrorException: Undefined variable $bookings
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bookings', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:37:29 --> ErrorException: Undefined variable $bookings
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bookings', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:37:31 --> ErrorException: Undefined variable $bookings
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bookings', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:38:06 --> ErrorException: Undefined variable $booking
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $booking', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:38:07 --> ErrorException: Undefined variable $booking
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $booking', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:38:10 --> ErrorException: Undefined variable $booking
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $booking', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 17:38:14 --> ErrorException: Undefined variable $booking
+[Method: GET, Route: account]
+in APPPATH\Views\account.php on line 49.
+ 1 APPPATH\Views\account.php(49): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $booking', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php', 49)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\account.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('account', [], true)
+ 5 APPPATH\Controllers\Account.php(9): view('account')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Account->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Account))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:17:14 --> ErrorException: Array to string conversion
+[Method: GET, Route: register]
+in APPPATH\Views\register.php on line 54.
+ 1 APPPATH\Views\register.php(54): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\register.php', 54)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\app\\Views\\register.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('register', [], true)
+ 5 APPPATH\Controllers\Auth.php(43): view('register')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Auth->register()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:43 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:44 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:45 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:46 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:46 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:46 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:46 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:46 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:47 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:47 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:51 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: login]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:27:52 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: login]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:29:44 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:29:44 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:29:45 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:29:45 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:29:45 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:29:58 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:30:04 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: facilities]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('facilities', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:30:07 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: login]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:32:41 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: login]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:32:42 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: login]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('login', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:32:44 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: facilities]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('facilities', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:32:45 --> CodeIgniter\Filters\Exceptions\FilterException: "App\Middleware\AuthenticationMiddleware" must implement CodeIgniter\Filters\FilterInterface.
+[Method: GET, Route: /]
+in SYSTEMPATH\Filters\Filters.php on line 200.
+ 1 SYSTEMPATH\Filters\Filters.php(200): CodeIgniter\Filters\Exceptions\FilterException::forIncorrectInterface('App\\Middleware\\AuthenticationMiddleware')
+ 2 SYSTEMPATH\Filters\Filters.php(184): CodeIgniter\Filters\Filters->runBefore([...])
+ 3 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\Filters\Filters->run('', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')
+CRITICAL - 2024-05-11 18:36:20 --> TypeError: App\Controllers\About::index(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+[Method: GET, Route: about]
+in APPPATH\Controllers\About.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\About->index()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\About))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(312): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(49): require_once('C:\\Users\\rahma\\OneDrive\\Desktop\\Fastwork\\framework-4.5.1\\public\\index.php')

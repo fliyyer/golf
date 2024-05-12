@@ -35,6 +35,7 @@ class Filters extends BaseFilters
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
         'authentication' => \App\Middleware\Authentication::class,
+        'auth' => \App\Middleware\AuthenticationMiddleware::class,
     ];
 
     /**
@@ -106,5 +107,6 @@ class Filters extends BaseFilters
      */
     public array $filters = [
         'authentication' => \App\Middleware\Authentication::class,
+        'auth' => \App\Middleware\AuthenticationMiddleware::class,
     ];
 }

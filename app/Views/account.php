@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facilities</title>
+    <title>Account</title>
     <Link rel="stylesheet" href="<?= base_url() ?>css/styles.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -12,8 +12,30 @@
 <body>
     <?php include('partials/navbar.php'); ?>
 
-    <main class="flex h-screen w-full">
-        <div class="flex flex-col justify-center items-start max-w-7xl mx-auto h-full">
+    <main class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mx-auto max-w-7xl py-8 sm:py-16">
+        <div class="flex gap-44 items-center max-w-7xl mx-auto h-full">
+            <!-- daftar bookingan -->
+            <div>
+                <?php if (!empty($bookings)) : ?>
+                    <p class="text-[#061023] text-[25px] font-semibold">My Bookings</p>
+                    <div class="flex flex-col gap-4 mt-8">
+                        <?php $counter = 0; ?>
+                        <?php foreach ($bookings as $booking) : ?>
+                            <?php if ($counter < 4) : ?>
+                                <div class="bg-[#AFB1B6] p-4 rounded-lg">
+                                    <p class="text-[#061023] text-[25px] font-semibold"><?= $booking['title'] ?> - <?= $booking['selectedTeeTime'] ?></p>
+                                    <p class="text-[#061023] text-[25px] uppercase font-semibold"><?= $booking['selectedDay'] ?></p>
+                                </div>
+                            <?php endif; ?>
+                            <?php $counter++; ?>
+                        <?php endforeach; ?>
+                    </div>
+                <?php else : ?>
+                    <p class="text-[#061023] text-[25px] font-semibold">No booking found.</p>
+                <?php endif; ?>
+            </div>
+
+
             <div class="bg-[#736E6E] rounded-[68px] w-[430px] h-[635px] flex flex-col justify-center items-center">
                 <p class="text-[#061023] text-[25px] font-semibold">Profile</p>
                 <div class="mt-[42px] mb-[96px]">
@@ -37,11 +59,12 @@
                         </defs>
                     </svg>
                 </div>
-                <p class="text-[#061023] text-[25px] font-semibold">Pablo Evander</p>
-                <p class="text-[#061023] text-[25px]">Pablo23@gmail.com</p>
-                <p class="text-[#061023] text-[25px]">0856342635421</p>
+                <!-- get user data -->
+                <p class="text-[#061023] text-[25px] font-semibold"><?= session()->get('username') ?></p>
+                <p class="text-[#061023] text-[25px]"><?= session()->get('username') ?>@gmail.com</p>
+                <p class="text-[#061023] text-[25px]"><?= session()->get('phone') ?></p>
+                <button onclick="window.location.href='<?= base_url('logout') ?>'" class="px-8 mx-auto mt-8 bg-black text-white py-2 uppercase font-semibold rounded-md mb-8 hover:bg-[#D9D9D9] hover:text-black focus:outline-none">Logout</button>
             </div>
-            <button onclick="window.location.href='<?= base_url('logout') ?>'" class="px-8 mx-auto mt-8 bg-black text-white py-2 uppercase font-semibold rounded-md mb-8 hover:bg-[#D9D9D9] hover:text-black focus:outline-none">Logout</button>
         </div>
     </main>
 

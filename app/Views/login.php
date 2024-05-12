@@ -18,7 +18,7 @@
 
 <body class="flex items-center bg-no-repeat bg-cover bg-center h-screen" style="background-image: url('<?= base_url('assets/background.png') ?>');">
     <div class="flex max-w-7xl items-center justify-around w-full mx-auto">
-        <div class="flex flex-col">
+        <div class=" hidden md:block flex-col">
             <h1 class="text-3xl font-bold text-[80px] uppercase text-white mb-4">Welcome TO</h1>
             <p class="text-[80px] font-bold uppercase mt-8 text-right text-white ">GOLF+</p>
             <div class="flex flex-col space-y-6 mt-28 items-center">

@@ -8,6 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <Link rel="stylesheet" href="<?= base_url() ?>css/styles.css">
     <title>Facility Detail</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="<?= base_url('path_to/sweetalert2.min.css') ?>">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
 <style>
@@ -58,21 +62,21 @@
                 <option value="sunday">Sunday</option>
             </select>
             <h1 class="text-black text-5xl mt-[30px] font-bold">TEE TIME</h1>
-            <div class="flex gap-16 mt-5">
-                <button class="bg-[#AFB1B6] py-2 px-4 hover:bg-black hover:text-[#AFB1B6] rounded-lg font-semibold">08:00</button>
-                <button class="bg-[#AFB1B6] py-2 px-4 rounded-lg hover:bg-black hover:text-[#AFB1B6] font-semibold">10:00</button>
-                <button class="bg-[#AFB1B6] py-2 px-4 rounded-lg hover:bg-black hover:text-[#AFB1B6] font-semibold">16:00</button>
-                <button class="bg-[#AFB1B6] py-2 px-4 rounded-lg hover:bg-black hover:text-[#AFB1B6] font-semibold">19:00</button>
+            <div class="flex gap-16 mt-5" id="teeTimeButtons">
+                <button class="tee-time-button bg-[#AFB1B6] py-2 px-4 rounded-lg font-semibold" value="08:00">08:00</button>
+                <button class="tee-time-button bg-[#AFB1B6] py-2 px-4 rounded-lg font-semibold" value="10:00">10:00</button>
+                <button class="tee-time-button bg-[#AFB1B6] py-2 px-4 rounded-lg font-semibold" value="16:00">16:00</button>
+                <button class="tee-time-button bg-[#AFB1B6] py-2 px-4 rounded-lg font-semibold" value="19:00">19:00</button>
             </div>
             <h1 class="text-black text-5xl mt-[30px] font-bold">PLAYER</h1>
-            <div class="flex gap-16 mt-5">
-                <button class="bg-[#AFB1B6] py-2 px-4 rounded-lg hover:bg-black hover:text-[#AFB1B6] font-semibold">1</button>
-                <button class="bg-[#AFB1B6] py-2 px-4 rounded-lg hover:bg-black hover:text-[#AFB1B6] font-semibold">2</button>
+            <div class="flex gap-16 mt-5" id="playerButtons">
+                <button class="player-button bg-[#AFB1B6] py-2 px-4 rounded-lg font-semibold" value="1">1</button>
+                <button class="player-button bg-[#AFB1B6] py-2 px-4 rounded-lg font-semibold" value="2">2</button>
             </div>
             <h1 class="text-black text-5xl mt-[30px] font-bold">PRICE</h1>
-            <div class="flex gap-16 mt-5">
-                <button class="bg-[#AFB1B6] py-2 px-4 rounded-lg hover:bg-black hover:text-[#AFB1B6] font-semibold">Rp. 500.000,00</button>
-                <button class="bg-[#AFB1B6] py-2 px-4 rounded-lg hover:bg-black hover:text-[#AFB1B6] font-semibold">Rp. 1.000.000,00</button>
+            <div class="flex gap-16 mt-5" id="priceButtons">
+                <button class="price-button bg-[#AFB1B6] py-2 px-4 rounded-lg font-semibold" value="500000">Rp. 500.000,00</button>
+                <button class="price-button bg-[#AFB1B6] py-2 px-4 rounded-lg font-semibold" value="1000000">Rp. 1.000.000,00</button>
             </div>
         </div>
         <div class="flex flex-col relative">
@@ -97,7 +101,7 @@
                             <p class="text-[#AFB1B6]">VIRTUAL ACCOUNT</p>
                         </div>
                         <div>
-                            <input type="radio" name="payment_method" value="visa">
+                            <input type="radio" name="payment_method" value="virtual_account">
                             <span class="checkmark border border-black"></span>
                         </div>
                     </label>
@@ -115,19 +119,74 @@
     <script>
         function bookFacility() {
             var selectedDay = document.getElementById('daySelect').value;
-            var selectedTeeTime = document.querySelector('input[name="tee_time"]:checked').value;
-            var selectedPlayer = document.querySelector('input[name="player"]:checked').value;
-            var selectedPrice = document.querySelector('input[name="price"]:checked').value;
+            var selectedTeeTime = document.querySelector('.tee-time-button.bg-red-600').value;
+            var selectedPlayer = document.querySelector('.player-button.bg-red-600').value;
+            var selectedPrice = document.querySelector('.price-button.bg-red-600').value;
             var selectedPaymentMethod = document.querySelector('input[name="payment_method"]:checked').value;
-            localStorage.setItem('selectedDay', selectedDay);
-            localStorage.setItem('selectedTeeTime', selectedTeeTime);
-            localStorage.setItem('selectedPlayer', selectedPlayer);
-            localStorage.setItem('selectedPrice', selectedPrice);
-            localStorage.setItem('selectedPaymentMethod', selectedPaymentMethod);
-            alert('Booking berhasil disimpan!');
-        }
-    </script>
 
+            $.ajax({
+                type: 'POST',
+                url: '<?= base_url('save-booking') ?>',
+                data: {
+                    selectedDay: selectedDay,
+                    selectedTeeTime: selectedTeeTime,
+                    selectedPlayer: selectedPlayer,
+                    selectedPrice: selectedPrice,
+                    selectedPaymentMethod: selectedPaymentMethod,
+                    title: '<?= $facilityTitle ?>',
+                },
+                success: function(response) {
+                    Swal.fire({
+                        title: 'Success',
+                        text: 'Booking successful!',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            window.location.href = '<?= base_url('/account') ?>';
+                        }
+                    });
+
+                },
+                error: function(xhr, status, error) {
+                    alert('Error: ' + error);
+                }
+            });
+        }
+
+        document.querySelectorAll('.tee-time-button').forEach(item => {
+            item.addEventListener('click', event => {
+                document.querySelectorAll('.tee-time-button').forEach(btn => {
+                    btn.classList.remove('bg-red-600');
+                });
+                event.target.classList.add('bg-red-600', 'text-white');
+            });
+        });
+
+        document.querySelectorAll('.player-button').forEach(item => {
+            item.addEventListener('click', event => {
+                document.querySelectorAll('.player-button').forEach(btn => {
+                    btn.classList.remove('bg-red-600');
+                });
+                event.target.classList.add('bg-red-600', 'text-white');
+            });
+        });
+
+        document.querySelectorAll('.price-button').forEach(item => {
+            item.addEventListener('click', event => {
+                document.querySelectorAll('.price-button').forEach(btn => {
+                    btn.classList.remove('bg-red-600');
+                });
+                event.target.classList.add('bg-red-600', 'text-white');
+            });
+        });
+    </script>
 </body>
+
+
+
+</html>
+
+
 
 </html>

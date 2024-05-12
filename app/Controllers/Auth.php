@@ -20,7 +20,9 @@ class Auth extends BaseController
         if ($user && password_verify($password, $user['password'])) {
             $session = session();
             $session->set([
+                'userId' => $user['id'],
                 'username' => $user['username'],
+                'phone' => $user['phone'],
             ]);
             return redirect()->to('/');
         } else {

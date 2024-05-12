@@ -18,7 +18,7 @@
         </div>
     </main>
     <section class="flex flex-col justify-center items-center max-w-7xl mx-auto">
-        <div class="grid grid-cols-3 pb-32 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 pb-32 gap-10">
             <a href="<?= base_url('facilities/1') ?>" class="facility-link">
                 <img class="w-[393px] hover:scale-105 duration-300 h-[266px] rounded-md" src="<?= base_url('assets/g1.png') ?>" alt="Concordia shooting range">
                 <h1 class="text-lg font-bold uppercase mt-1">Concordia shooting range</h1>
