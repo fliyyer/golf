@@ -4,7 +4,7 @@
             <img class="w-[130px] absolute ml-10 mt-5" src="<?= base_url('assets/logo3.png') ?>" alt="Logo">
         </div>
         <div>
-            <div class="flex gap-48 mt-20">
+            <div class="flex flex-col md:flex-row gap-10 md:gap-48 mt-20">
                 <ul class="list-none font-semibold flex flex-col gap-3">
                     <li>CONTACT US</li>
                     <li>GOLF+@GMAIL.COM</li>

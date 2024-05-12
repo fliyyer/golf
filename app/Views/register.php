@@ -32,15 +32,15 @@
                 <p class="text-center text-xl text-white mb-4">Register New Account</p>
                 <div class="mb-4 mt-14">
                     <label for="username" class="block text-lg text-white">Username</label>
-                    <input type="text" name="username" id="username" class="form-input mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
+                    <input type="text" name="username" id="username" class="form-input text-white mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
                 </div>
                 <div class="mb-4">
                     <label for="phone" class="block text-lg text-white">Phone</label>
-                    <input type="text" name="phone" id="phone" class="form-input mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
+                    <input type="text" name="phone" id="phone" class="form-input text-white mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
                 </div>
                 <div class="mb-4">
                     <label for="password" class="block text-lg text-white">Password</label>
-                    <input type="password" name="password" id="password" class="form-input mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
+                    <input type="password" name="password" id="password" class="form-input text-white mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
                 </div>
                 <button type="submit" class="w-full bg-black text-white py-2 uppercase font-semibold px-4 rounded-md mb-8 hover:bg-[#D9D9D9] hover:text-black focus:outline-none">Sign Up</button>
             </form>

@@ -36,11 +36,11 @@
                 <?php endif; ?>
                 <div class="mb-4 mt-14">
                     <label for="username" class="block text-lg text-white">Username</label>
-                    <input type="text" name="username" id="username" class="form-input mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
+                    <input type="text" name="username" id="username" class="form-input text-white mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
                 </div>
                 <div class="mb-4">
                     <label for="password" class="block text-lg text-white">Password</label>
-                    <input type="password" name="password" id="password" class="form-input mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
+                    <input type="password" name="password" id="password" class="form-input text-white mt-1 p-2 w-full bg-[#000000] bg-opacity-25 rounded-lg">
                 </div>
                 <div class="mb-4 flex justify-between mt-10 items-center">
                     <a href="<?= site_url('register') ?>" class="text-white">Sign Up</a>

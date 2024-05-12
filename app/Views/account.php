@@ -13,7 +13,7 @@
     <?php include('partials/navbar.php'); ?>
 
     <main class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8 mx-auto max-w-7xl py-8 sm:py-16">
-        <div class="flex gap-44 items-center max-w-7xl mx-auto h-full">
+        <div class="flex flex-col md:flex-row p-4 gap-44 items-center max-w-7xl mx-auto h-full">
             <!-- daftar bookingan -->
             <div>
                 <?php if (!empty($bookings)) : ?>
@@ -34,8 +34,6 @@
                     <p class="text-[#061023] text-[25px] font-semibold">No booking found.</p>
                 <?php endif; ?>
             </div>
-
-
             <div class="bg-[#736E6E] rounded-[68px] w-[430px] h-[635px] flex flex-col justify-center items-center">
                 <p class="text-[#061023] text-[25px] font-semibold">Profile</p>
                 <div class="mt-[42px] mb-[96px]">
