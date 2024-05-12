@@ -1,0 +1,16 @@
+ERROR - 2024-05-12 02:43:05 --> mysqli_sql_exception: Table 'users' already exists in C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\MySQLi\Connection.php:308
+Stack trace:
+#0 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\MySQLi\Connection.php(308): mysqli->query('CREATE TABLE `u...', 0)
+#1 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseConnection.php(722): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\BaseConnection.php(636): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\app\Database\Migrations\2024-05-12-024126_CreateUsersTable.php(32): CodeIgniter\Database\Forge->createTable('users')
+#5 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsersTable->up()
+#6 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Boot.php(338): CodeIgniter\CLI\Console->run()
+#11 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\Users\rahma\OneDrive\Desktop\Fastwork\framework-4.5.1\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
